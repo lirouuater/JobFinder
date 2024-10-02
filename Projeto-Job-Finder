@@ -1,0 +1,117 @@
+// app.js 
+const express    = require('express');
+const app        = express();
+const db         = require('./db/connection')
+const bodyParser = require('body-parser');
+
+const PORT = 3000;
+
+
+app.listen(PORT, function() {
+    console.log(`O Express está rodando na porta ${PORT}`);
+
+}); 
+//body parser 
+app.use(bodyParser.urlencoded({extended: false }));
+
+//db connection
+db.authenticate()
+  .then(() => {
+    console.log('Conectou ao banco de dados com sucesso');
+  })
+  .catch(err => {
+    console.log('Ocorreu um erro ao conectar', err);
+  });
+
+//routes
+
+app.get('/', (req, res) => {
+    res.send('está funcionando 3 ');
+});
+
+// jobs routes
+app.use('/jobs', require('./routes/jobs'));
+
+
+//jobs.js 
+
+const express = require('express');
+const router  = express.Router();
+const Job     = require('../models/Job');
+
+//rota de teste
+router.get('/test', (req, res)=> {
+    res.send('deu certo a badega');
+});
+
+//add job via postman
+router.post('/add', (req, res) => {
+
+    let {title, salary, company, description, email, new_job} = req.body;
+
+    //insert
+    Job.create({
+        title,
+        description,
+        salary,
+        company,
+        email,
+        new_job,
+    })
+    .then(() => res.redirect('/'))
+    .catch(err => console.log(err));
+
+
+});
+
+module.exports = router; 
+
+//Jobs.js
+
+const Sequelize = require('sequelize');
+const db = require('../db/connection');
+const sequelize = require('../db/connection');
+
+const Job = db.define('job', {
+    title: {
+        type: Sequelize.STRING,
+    },
+    description: {
+        type: Sequelize.STRING,
+    },
+    salary: {
+        type: Sequelize.STRING,
+    },
+    company: {
+        type: Sequelize.STRING,
+    },
+    email: {
+        type: Sequelize.STRING,
+    },
+    new_job: {
+        type: Sequelize.INTEGER
+
+    }
+
+});
+
+module.exports = Job
+
+
+//connection.js 
+
+const Sequelize = require('sequelize');
+
+const sequelize = new Sequelize({
+    dialect: 'sqlite',
+    storage: './db/app.db'
+});
+
+
+module.exports = sequelize
+
+
+
+
+
+
