@@ -1,14 +1,31 @@
-JobFinder: Plataforma de Busca de Empregos em Tecnologia"
+# JobFinder: Plataforma de Busca de Empregos em Tecnologia
 
-Com essa plataforma, você, programador, irá encontrar o emprego ideal de acordo com os seus conhecimentos e habilidades, visando participar de grandes projetos!
+**Descrição:**
+
+JobFinder é uma plataforma web que conecta programadores a oportunidades de emprego em diversas áreas da tecnologia. Com um design intuitivo e funcionalidades avançadas, a plataforma facilita a busca por vagas e permite que empresas encontrem os melhores talentos.
+
+**Tecnologias:**
+
+* Frontend: React, JavaScript, CSS
+* Backend: Node.js, Express.js
+* Banco de dados: MongoDB
+* Cloud: AWS
+
+**Funcionalidades:**
+
+* **Busca personalizada:** Filtre vagas por cargo, localização, tecnologias e outras palavras-chave.
+* **Perfil de candidato:** Crie um perfil detalhado com seu currículo e habilidades.
+* **Notificações:** Receba alertas sobre novas vagas que correspondam ao seu perfil.
+* **Sistema de recomendação:** Descubra novas oportunidades de emprego com base em suas preferências.
+
+**Instalação:**
+
+1. Clone o repositório: `https://github.com/lirouuater/JobFinder`
+2. Instale as dependências: `npm install`
+3. Inicie o servidor: `npm start`
 
 
-Tecnologias utilizadas: VScode(IDE); HTML; CSS; JavaScript; node.js; Express; Postman; SQLite; BootstrapCDN
-Filtros de busca por cargo, localização, tecnologias, salário, empresa;
-Cadastro de candidatos e empresas;
+**Licença:**
 
+Este projeto está licenciado sob a MIT License.
 
-
-
-
-loading...
