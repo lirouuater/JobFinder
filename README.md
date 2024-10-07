@@ -8,8 +8,8 @@ JobFinder é uma plataforma web que conecta programadores a oportunidades de emp
 
 * Frontend: React, JavaScript, CSS
 * Backend: Node.js, Express.js
-* Banco de dados: MongoDB
-* Cloud: AWS
+* Banco de dados: SQLite
+
 
 **Funcionalidades:**
 
