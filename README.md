@@ -16,13 +16,8 @@ JobFinder é uma plataforma web que conecta programadores a oportunidades de emp
 * **Busca personalizada:** Filtre vagas por cargo, localização, tecnologias e outras palavras-chave.
 * **Perfil de candidato:** Crie um perfil detalhado com seu currículo e habilidades.
 * **Notificações:** Receba alertas sobre novas vagas que correspondam ao seu perfil.
-* **Sistema de recomendação:** Descubra novas oportunidades de emprego com base em suas preferências.
 
-**Instalação:**
 
-1. Clone o repositório: `https://github.com/lirouuater/JobFinder`
-2. Instale as dependências: `npm install`
-3. Inicie o servidor: `npm start`
 
 
 **Licença:**
